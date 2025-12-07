@@ -18,10 +18,9 @@
         Menu
       </button>
       <nav id="primary-nav" class="nav">
-        <a href="web2.html">Home</a>
-        <a href="https://www.instagram.com/ishantdev_ik/?__pwa=1">Instagram</a>
+        <a href="index.html">Home</a>
         <a href="Projects/Untitled-1.html">Projects</a>
-        <a href="" class="neon neon-green small">Contact Form</a>
+        <a href="#" class="neon neon-green small">Contact</a>
       </nav>
     </div>
   </header>
@@ -101,9 +100,10 @@
     <section id="about" class="section container reveal">
       <h2>About Me</h2>
       <p>
-        A creative web developer who designs with 
+       Hi, My Name is Ishant Kohli im A creative web developer who designs with 
         rhythm and codes with intention focused on performance, 
-        accessibility, and modern aesthetics.
+        accessibility, and modern aesthetics. I am currently pursuing BCA(H) from Trinity Institute of Professional Studies, Delhi.
+        I love to create beautiful, functional, and user-friendly websites Using HTML, CSS, JavaScript, and AI.
       </p>
     </section>
 
@@ -132,27 +132,29 @@
       </div>
     </section>
 
-    <section id="contact" class="section container reveal">
-      <h2>Contact Me</h2>
-      <form class="contact-form" action="#" method="post">
-        <div class="grid">
-          <label>
-            <span>Your Name</span>
-            <input type="text" required />
-          </label>
-          <label>
-            <span>Your Email</span>
-            <input type="email" required />
-          </label>
-        </div>
-        <label class="block">
-          <span>Your Message</span>
-          <textarea rows="5" required></textarea>
-        </label>
+<form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
 
-        <button type="submit" class="btn neon neon-green">Send</button>
-      </form>
-    </section>
+    <input type="hidden" name="access_key" value="ae3db375-a739-4ac1-a28b-db45849765ae">
+    
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
+    <div class="grid">
+        <label>
+            <span>Your Name</span>
+            <input type="text" name="name" required>
+        </label>
+        <label>
+            <span>Your Email</span>
+            <input type="email" name="email" required>
+        </label>
+    </div>
+    <label class="block">
+        <span>Your Message</span>
+        <textarea name="message" required></textarea>
+    </label>
+    <button type="submit" class="btn neon neon-green">Send</button>
+</form>
+>
   </main>
 
   <footer class="site-footer">

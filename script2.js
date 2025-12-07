@@ -59,3 +59,35 @@ if('IntersectionObserver' in window && reveals.length){
     }
   }, { passive: true });
 }
+
+
+//WhatsApp Chat Widget
+
+// Add this at the end of your script2.js file
+
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        // Get form data
+        const formData = new FormData(this);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+        
+        // Create WhatsApp message
+        const whatsappMessage = `*New Contact Form Submission*%0A%0A` +
+                               `*Name:* ${name}%0A` +
+                               `*Email:* ${email}%0A` +
+                               `*Message:* ${message}`;
+        
+        // Your WhatsApp number (include country code without + or spaces)
+        const phoneNumber = '919220037676'; 
+        
+        // Open WhatsApp in new tab
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+        window.open(whatsappURL, '_blank');
+        
+        // Form will still submit to Web3Forms for email
+    });
+}
