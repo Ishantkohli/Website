@@ -181,6 +181,31 @@ input:focus, textarea:focus{border-color:#2fc1ff; box-shadow:0 0 0 3px rgba(47,1
 .site-footer{border-top:1px solid var(--border); color:#9aa3b2; padding:22px 0; margin-top:32px}
 .footer-inner{display:flex; justify-content:center}
 
+.nav {
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+
+@media (max-width:900px){
+  .menu-toggle{ display:inline-flex; }
+
+  .nav{
+    position:absolute;
+    right:16px;
+    top:64px;
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    min-width:180px;
+  }
+
+  .nav[hidden]{ display:none; }
+}
 
 
 * {
