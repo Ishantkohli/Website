@@ -10,20 +10,28 @@
 </head>
 <body>
   <!-- Header / Navbar -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#">Ishant Kohli</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="brand">Ishant Kohli</a>
 
-      <button class="menu-toggle neon neon-blue" aria-controls="primary-nav" aria-expanded="false">
-        Menu
-      </button>
-      <nav id="primary-nav" class="nav">
-        <a href="index.html">Home</a>
-        <a href="Projects/Untitled-1.html">Projects</a>
-        <a href="#" class="neon neon-green small">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <span class="theme-icon">🌙</span>
+    </button>
+
+    <button class="menu-toggle" aria-controls="primaryNav" aria-expanded="false">
+      <span>Menu</span>
+    </button>
+
+    <nav class="nav" id="primaryNav">
+      <a href="#home">Home</a>
+      <a href="Media/media.html">About</a>
+      <a href="#skills">Skills</a>
+      <a href="Projects/Untitled-1.html">Projects</a>
+      <a href="#timeline">Journey</a>
+      <a href="Contact/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
 <section id="music" class="container music-wrap">
   <h3 class="music-title">Favorite songs</h3>
@@ -66,7 +74,7 @@
     <div class="music-card">
       <iframe
         style="border-radius:12px"
-        src="https://open.spotify.com/embed/track/1jjmRJyc4A8bzH9PlLQdG3?utm_source=generator&theme=0"
+        src="https://open.spotify.com/embed/track/0orvncykYQy4mPnIAdhhKM?utm_source=generator&theme=0"
         width="100%" height="152" frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
@@ -154,6 +162,19 @@
     </label>
     <button type="submit" class="btn neon neon-green">Send</button>
 </form>
+<div class="contact-quick-wrap reveal">
+  <p class="contact-quick-text">
+    <center>
+    <strong><b>Press This Button To Simply Contact Me On WhatsApp Or just Mail Me.</strong></b>
+  </center>
+  </p>
+
+ <center> <a href="Contact/contact.html" class="btn neon neon-green contact-quick-btn">
+    Open Contact Page
+    </center>
+  </a>
+</div>
+
 >
   </main>
 
@@ -163,5 +184,6 @@
     </div>
   </footer>
   <script src="script2.js"></script>
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 </body>
 </html>

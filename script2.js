@@ -91,3 +91,40 @@ if (contactForm) {
         // Form will still submit to Web3Forms for email
     });
 }
+
+
+// THEME TOGGLE (dark / light)
+const themeToggle = document.getElementById('themeToggle');
+const root = document.documentElement;
+
+if (themeToggle) {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    root.classList.add('light-theme');
+    themeToggle.querySelector('.theme-icon').textContent = '☀️';
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const isLight = root.classList.toggle('light-theme');
+    themeToggle.querySelector('.theme-icon').textContent = isLight ? '☀️' : '🌙';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+}
+
+// SCROLL TO TOP BUTTON
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+window.addEventListener('scroll', () => {
+  if (!scrollTopBtn) return;
+  if (window.scrollY > 300) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+});
+
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
