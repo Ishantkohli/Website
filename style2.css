@@ -439,3 +439,10 @@ body.loading{
 .logo span{
   filter: hue-rotate(calc(var(--neon-hue) * 1deg));
 }
+/* Hide site while loader is active */
+body.loading main,
+body.loading header,
+body.loading footer {
+  opacity: 0;
+  pointer-events: none;
+}

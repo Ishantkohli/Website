@@ -177,8 +177,8 @@ window.addEventListener("load", () => {
     loader.style.transform = "scale(1.05)";
 
     setTimeout(() => {
-      loader.remove();
-      document.body.classList.remove("loading");
+      loader();
+      document.body.classList("loading");
     }, 600);
 
   }, LOADER_DURATION);
