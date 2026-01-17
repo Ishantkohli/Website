@@ -164,7 +164,6 @@ setInterval(() => {
 
 // ================= LOADER CONTROL (NO AUDIO) =================
 window.addEventListener("load", () => {
-  document.body.classList.add("loading");
 
   const LOADER_DURATION = 6000; // 6 seconds
 
@@ -177,8 +176,8 @@ window.addEventListener("load", () => {
     loader.style.transform = "scale(1.05)";
 
     setTimeout(() => {
-      loader();
-      document.body.classList("loading");
+      loader.remove();
+      document.body.classList.remove("loading");
     }, 600);
 
   }, LOADER_DURATION);
