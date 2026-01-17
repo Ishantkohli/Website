@@ -153,3 +153,33 @@ if (scrollTopBtn) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+
+// ================= NEON COLOR CYCLE =================
+let hue = 190;
+
+setInterval(() => {
+  hue = (hue + 1) % 360;
+  document.documentElement.style.setProperty("--neon-hue", hue);
+}, 40);
+
+// ================= LOADER CONTROL (NO AUDIO) =================
+window.addEventListener("load", () => {
+  document.body.classList.add("loading");
+
+  const LOADER_DURATION = 6000; // 6 seconds
+
+  setTimeout(() => {
+    const loader = document.getElementById("page-loader");
+    if (!loader) return;
+
+    loader.style.transition = "opacity .6s ease, transform .6s ease";
+    loader.style.opacity = "0";
+    loader.style.transform = "scale(1.05)";
+
+    setTimeout(() => {
+      loader.remove();
+      document.body.classList.remove("loading");
+    }, 600);
+
+  }, LOADER_DURATION);
+});
