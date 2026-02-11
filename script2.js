@@ -165,7 +165,7 @@ setInterval(() => {
 // ================= LOADER CONTROL (NO AUDIO) =================
 window.addEventListener("load", () => {
 
-  const LOADER_DURATION = 6000; // 6 seconds
+  const LOADER_DURATION = 3000; // 6 seconds
 
   setTimeout(() => {
     const loader = document.getElementById("page-loader");
