@@ -1,12 +1,14 @@
 <!doctype html> 
 <html lang="en">
 <head>
+  <link rel="preload" href="IMG_20250906_203716.webp" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <meta name="description" content="Ishant Kohli - Creative Web Developer | Portfolio Website showcasing projects, skills, and journey in modern web development.">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ishant Website</title>
+  <link rel="preload" href="style2.css" as="style">
   <link rel="stylesheet" href="style2.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="Projects/projectpage.html">
@@ -51,7 +53,7 @@
   </div>
 </header>
   <main id="home">
-
+    <!-- Meri Photo -->
     <section class="hero container">
       <div class="hero-grid">
         <div class="hero-left reveal">
@@ -67,7 +69,13 @@
         <!-- My Pic-->
         <div class="hero-right reveal">
 
-          <img src="IMG_20250906_203716.jpg" alt="Portrait of Ishant Kohli" loading="lazy" />
+          <img 
+  src="IMG_20250906_203716.webp"
+  width="600"
+  height="700"
+  loading="eager"
+  decoding="async"
+  alt="Portrait of Ishant Kohli">
         </div>
       </div>
     </section>
@@ -195,7 +203,7 @@
       <small>© 2025 Ishant Kohli</small> <br>
     </div>
   </footer>
-  <script src="script2.js"></script>
+  <script defer src="script2.js"></script>
   <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 </body>
 </html>

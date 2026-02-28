@@ -155,17 +155,11 @@ if (scrollTopBtn) {
 }
 
 // ================= NEON COLOR CYCLE =================
-let hue = 190;
-
-setInterval(() => {
-  hue = (hue + 1) % 360;
-  document.documentElement.style.setProperty("--neon-hue", hue);
-}, 40);
 
 // ================= LOADER CONTROL (NO AUDIO) =================
 window.addEventListener("load", () => {
 
-  const LOADER_DURATION = 3000; // 3 seconds
+  const LOADER_DURATION = 2000; // 2 seconds
 
   setTimeout(() => {
     const loader = document.getElementById("page-loader");
@@ -178,7 +172,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       loader.remove();
       document.body.classList.remove("loading");
-    }, 600);
+    }, 350);
 
   }, LOADER_DURATION);
 });
