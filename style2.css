@@ -164,13 +164,13 @@ input:focus, textarea:focus{border-color:#2fc1ff; box-shadow:0 0 0 3px rgba(47,1
   text-decoration:none;
   border:2px solid currentColor;
   background:transparent;
-  color:currentColor;
+  color:rgb(255, 0, 0);
   transition:all .2s ease;
 }
 
 .neon:hover{
   background:currentColor;
-  background-color:#8f5fa5;
+  background-color:#000000;
   box-shadow:0 0 15px currentColor,
              0 0 15px currentColor;
 }
